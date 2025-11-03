@@ -16,7 +16,7 @@ jobs:
       
       - name: Setup SSH
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
+          echo "${{ secrets.LIGHTSAIL_PEM_KEY }}" > key.pem
           chmod 400 key.pem
 
       - name: Deploy to remote server
