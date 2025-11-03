@@ -27,4 +27,4 @@ jobs:
             source ~/.nvm/nvm.sh &&
             cd strapi &&
             git pull origin main && 
-            npm -v"
+            npm install"
