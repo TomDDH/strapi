@@ -31,7 +31,7 @@ const AnalyticViews = (props) => {
             gap: '24px',
         }} >
 
-            AnalyticViews
+            Analytic Views for your data here!
 
             <DateTimePicker />
 
