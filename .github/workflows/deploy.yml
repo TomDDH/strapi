@@ -25,4 +25,5 @@ jobs:
         run: |
           ssh -i key.pem ubuntu@18.226.104.176 "
             cd strapi &&
-            git pull origin main"
+            git pull origin main && 
+            npm install"
