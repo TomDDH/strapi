@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "ES2021",
+    "jsx": "react",
     "checkJs": true,
     "allowJs": true
   }

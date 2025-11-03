@@ -27,13 +27,13 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
     "uuid": "8cd588bd-cc95-4ddc-b6df-600602691de9",
+    "dir": "src",
     "installId": "25a7c44941970366fbfab0b65a130c96acbac24f2cb1b6bf946ca66ae64593a9"
   }
 }
