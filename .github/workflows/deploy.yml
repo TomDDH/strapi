@@ -13,3 +13,4 @@ jobs:
         with:
           node-version: '22'
       - run: npm -v
+      - run: ssh -T ubuntu@18.226.104.176
