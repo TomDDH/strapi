@@ -17,26 +17,8 @@ const CustomTextInput = (props) => {
 
   const document = useDocumentRBAC('CustomTextInput', data => data);
   const ele = useElementOnScreen(data => data);
-  // const locale = useMemo(() => {
-  //   if (!querys) return 'en';
-
-  //   const query = querys?.[0] || {
-  //     plugins: {
-  //       i18n: {
-  //         locale: 'en'
-  //       }
-  //     }
-  //   };
-
-  // }, [querys]);
-
-  // const query = query?.plugins?.i18n?.locale || 'en';
-  // const getDocument = unstable_useContentManagerContext();
-
-  // const app = useAppInfo('CustomTextInput', (state) => state);
-
+ 
   console.log('🚀 CustomTextInput props:', props, app, get, query, document, ele);
-
 
   const {
     name,
@@ -50,36 +32,13 @@ const CustomTextInput = (props) => {
 
   const [prompt, setPrompt] = useState('');
   const [err, setErr] = useState('');
-
-
   const handleTranslate = async () => {
     const baseText = baseData.consi || '';
-    // https://translation.googleapis.com/language/translate/v2?key=AIzaSyCRKmPZ6Jx3kzRsY6cN4nb2uZ65uAuPe20
-
-
     console.log('Translating prompt:', baseText);
-
     try {
-      // const presond = await axios.post('https://translation.googleapis.com/language/translate/v2?key=AIzaSyCRKmPZ6Jx3kzRsY6cN4nb2uZ65uAuPe20', {
-      //   "q": baseText,
-      //   "source": "en",
-      //   "target": "zh",
-      //   "format": "text"
-      // })
-
-
-      // const result = presond.data.data.translations[0].translatedText;
-      // onChange({
-      //   target: {
-      //     name,
-      //     value: result
-      //   }
-      // });
-
       const presond = await axios.post('/api/language/translate', {
         q: baseText
       });
-      
       const result = presond.data.translatedText; 
       onChange({
         target: {
